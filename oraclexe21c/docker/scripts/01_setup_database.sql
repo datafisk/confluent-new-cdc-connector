@@ -8,9 +8,9 @@ COLUMN MEMBER FORMAT A40
 COLUMN MEMBERS FORMAT 999
 SELECT a.group#,b.member,a.members, a.bytes/1024/1024 as MB, a.status FROM v$log a,v$logfile b WHERE a.group# = b.group#;
 -- Change Redo log size
-alter database add logfile group 4  '/opt/oracle/oradata/FREE/redo04.log' size 2G;
-alter database add logfile group 5  '/opt/oracle/oradata/FREE/redo05.log' size 2G;
-alter database add logfile group 6  '/opt/oracle/oradata/FREE/redo06.log' size 2G;
+alter database add logfile group 4  '/opt/oracle/oradata/XE/redo04.log' size 2G;
+alter database add logfile group 5  '/opt/oracle/oradata/XE/redo05.log' size 2G;
+alter database add logfile group 6  '/opt/oracle/oradata/XE/redo06.log' size 2G;
 -- switch to new group
 alter system switch logfile;
 alter system switch logfile;
@@ -39,7 +39,7 @@ alter database archivelog;
 alter database open;
 ALTER SESSION SET CONTAINER=cdb$root;
 ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
-ALTER SESSION SET CONTAINER=FREEPDB1;
+ALTER SESSION SET CONTAINER=XEPDB1;
 ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
 -- Made Logging asynchronous
 ALTER SYSTEM SET commit_logging = 'BATCH' CONTAINER=ALL;
