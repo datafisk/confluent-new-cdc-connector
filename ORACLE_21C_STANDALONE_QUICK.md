@@ -131,6 +131,19 @@ sudo docker exec -it oracle21c sqlplus ordermgmt/kafka@XEPDB1
 sudo docker exec -it oracle21c sqlplus c##ggadmin/Confluent12!@XE
 ```
 
+## Optional: Enable TCPS (TLS/SSL Encryption)
+
+For production deployments, you should encrypt CDC connections using TCPS:
+
+📄 **[ORACLE_TCPS_SETUP.md](ORACLE_TCPS_SETUP.md)** - Complete guide to enable TLS/SSL encryption
+
+This adds:
+- Encrypted connections between connector and Oracle (port 2484)
+- Certificate-based authentication
+- Protection for sensitive CDC data in transit
+
+**Recommended for:** Production environments, compliance requirements (PCI-DSS, HIPAA, SOC2)
+
 ## Next Steps
 
 After Oracle is configured:

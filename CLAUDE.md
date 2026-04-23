@@ -14,6 +14,7 @@ This is a demonstration repository for the Confluent Oracle CDC Connector using 
 - `ORACLE_INSTALL_DOCKER.md` - Install Oracle Database via Docker (21c XE, 23ai FREE, 26ai FREE)
 - `ORACLE_SETUP_STANDALONE.md` - Configure Oracle DB for CDC (redo logs, users, schema, data)
 - `XSTREAM_SETUP.md` - XStream Outbound Server configuration and management
+- `ORACLE_TCPS_SETUP.md` - Enable TLS/SSL encrypted connections (TCPS) for production security
 - `ORACLE_CLIENT_MACOS_SETUP.md` - Install Oracle Instant Client on macOS for local sqlplus access
 
 ## Project Structure

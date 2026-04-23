@@ -361,5 +361,22 @@ Check these in order:
 
 ---
 
+## Security (Optional)
+
+### Enable TCPS Encryption
+
+For production, encrypt CDC connections with TLS/SSL:
+
+**See:** [ORACLE_TCPS_SETUP.md](ORACLE_TCPS_SETUP.md)
+
+**Benefits:**
+- Encrypted connections (port 2484 vs 1521)
+- Certificate authentication
+- Compliance ready (PCI-DSS, HIPAA, SOC2)
+
+**Setup time:** 30-45 minutes
+
+---
+
 ## Tags
-`oracle` `cdc` `xstream` `confluent` `docker` `21c` `database`
+`oracle` `cdc` `xstream` `confluent` `docker` `21c` `database` `tcps` `ssl` `tls` `security`
